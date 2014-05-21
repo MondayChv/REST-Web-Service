@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0"
+	targetNamespace="http://cs548.stevens.edu/clinic/service/web/data/patient"
+	xmlns:tns="http://cs548.stevens.edu/clinic/service/web/data/patient"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="patient-dto" type="tns:patientDTO" />
+
+	<xs:complexType name="patientDTO">
+		<xs:sequence>
+			<xs:element name="patient-id" type="xs:long" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="birthDate" type="xs:dateTime" />
+			<xs:element name="treatments" type="xs:long" nillable="true"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+
